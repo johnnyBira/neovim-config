@@ -96,15 +96,26 @@ vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('n', '<C-s>', ':w<CR>')
 
 -- delete without adding to register
-vim.keymap.set('n', '<leader>d', '"_d')
-vim.keymap.set('v', '<leader>d', '"_d')
+vim.keymap.set({ 'n', 'v' }, 'd', '"_d')
+vim.keymap.set({ 'n', 'v' }, 'D', '"_D')
+vim.keymap.set({ 'n', 'v' }, '<leader>d', 'd')
+vim.keymap.set({ 'n', 'v' }, '<leader>D', 'D')
+
+-- change without adding to register
+vim.keymap.set({ 'n', 'v' }, 'c', '"_c')
+vim.keymap.set({ 'n', 'v' }, 'C', '"_C')
+vim.keymap.set({ 'n', 'v' }, '<leader>c', 'c')
+vim.keymap.set({ 'n', 'v' }, '<leader>C', 'C')
+
+-- past over selected without adding to register
+vim.keymap.set('v', 'p', '"_dP')
+vim.keymap.set('v', 'P', '"_dP')
+vim.keymap.set('v', '<leader>p', 'p')
+vim.keymap.set('v', '<leader>P', 'P')
 
 -- yank to system clipboard
-vim.keymap.set('n', '<leader>y', "\"+y")
-vim.keymap.set('v', '<leader>y', "\"+y")
-
--- paste over selected without adding to register
-vim.keymap.set('x', '<leader>p', "\"_dP")
+vim.keymap.set({ 'n', 'v' }, '<leader>y', "\"+y")
+vim.keymap.set({ 'n', 'v' }, '<leader>y', 'y')
 
 -- prevent x from adding to register
 vim.keymap.set('n', 'x', '"_x')
