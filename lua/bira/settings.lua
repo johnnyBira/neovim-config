@@ -34,7 +34,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme duskfox")
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -77,3 +77,29 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     update_in_insert = false,
   }
 )
+
+-- auto-reload files when modified externally
+-- https://unix.stackexchange.com/a/383044
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" },
+})
+
+---kl
+
+-- * Activate autoupdate on exit
+--  let g:tmux_navigator_save_on_switch = 1
+--
+-- * Disable vim->tmux navigation when the Vim pane is zoomed in tmux
+--  let g:tmux_navigator_disable_when_zoomed = 1
+--
+-- * If the Vim pane is zoomed, stay zoomed when moving to another tmux pane
+--  let g:tmux_navigator_preserve_zoom = 1
+--
+-- * Custom Key Bindings
+--  let g:tmux_navigator_no_mappings = 1
+
+
+-- ii* Disable vim->tmux navigation when the Vim pane is zoomed in tmux
+vim.g.tmux_navigator_disable_when_zoomed = 1

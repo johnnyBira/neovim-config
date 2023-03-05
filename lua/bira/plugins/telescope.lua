@@ -27,10 +27,7 @@ telescope.setup {
   },
 }
 
--- Enable telescope fzf native, if installed
-pcall(require('telescope').load_extension, 'fzf')
-
--- See `:help telescope.builtin`
+-- telescope keymaps
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()
@@ -41,13 +38,23 @@ vim.keymap.set('n', '<leader>/', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer]' })
 
-vim.keymap.set('n', '<leader>sz', function()
+vim.keymap.set('n', '<leader>sc', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require('telescope.builtin').git_files(require('telescope.themes').get_dropdown {
-    winblend = 10,
-    -- previewer = false,
+  require('telescope.builtin').find_files({
+    -- titkejj
+    cwd = "~/.config/nvim",
+    prompt_title = '[S]earch [C]onfigs]',
   })
-end, { desc = '[sz] Fuzzy search git-ls' })
+end, { desc = '[S]earch [C]onfigs' })
+
+-- Search for keymaps
+vim.keymap.set('n', '<leader>sk', function()
+  -- You can pass additional configuration to telescope to change theme, layout, etc.
+  require('telescope.builtin').keymaps({
+    -- title
+    prompt_title = '[S]earch [K]eymaps]',
+  })
+end, { desc = '[S]earch [K]eymaps' })
 
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
@@ -55,4 +62,7 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').lsp_references, { desc = '[S]earch [R]eferences' })
+
+-- Enable telescope fzf native, if installed
+pcall(require('telescope').load_extension, 'fzf')
 

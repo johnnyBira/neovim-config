@@ -8,10 +8,10 @@ end
 -- See `:help lualine.txt`
 lualine.setup {
   options = {
-    theme = 'nord',
+    theme = 'duskfox',
     component_separators = '|',
     section_separators = '',
-    git_branch_icon = '',
+    path = 1
   },
 }
 

@@ -1,0 +1,2 @@
+-- disable default gitgutter mappings
+vim.g.gitgutter_map_keys = 0
