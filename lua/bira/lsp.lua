@@ -56,6 +56,8 @@ local servers = {
 	pyright = {},
 	rust_analyzer = {},
 	tsserver = {},
+	markdownlint = {},
+	markdown = {},
 
 	sumneko_lua = {
 		Lua = {
