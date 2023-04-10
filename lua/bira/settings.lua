@@ -5,6 +5,8 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
+-- highlight current line
+vim.opt.cursorline = true
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
