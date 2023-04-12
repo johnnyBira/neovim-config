@@ -1,15 +1,12 @@
-require "bira.plugins.telescope"
-require "bira.plugins.lualine"
-require "bira.plugins.treesitter"
-require "bira.plugins.cmp"
-require "bira.plugins.nvimtree"
-require "bira.plugins.bufferline"
-require "bira.plugins.lazygit"
-require "bira.plugins.gitsigns"
-require "bira.plugins.null-ls"
-require "bira.plugins.gitgutter"
-require "bira.plugins.mini"
-require "bira.plugins.indent-blankline"
-require "bira.plugins.surround"
-require "bira.plugins.mini-starter"
-
+require("bira.plugins.telescope")
+require("bira.plugins.lualine")
+require("bira.plugins.treesitter")
+require("bira.plugins.cmp")
+require("bira.plugins.nvimtree")
+require("bira.plugins.bufferline")
+require("bira.plugins.lazygit")
+require("bira.plugins.gitsigns")
+require("bira.plugins.null-ls")
+require("bira.plugins.mini")
+require("bira.plugins.indent-blankline")
+require("bira.plugins.surround")
