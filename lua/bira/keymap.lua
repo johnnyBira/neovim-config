@@ -57,6 +57,10 @@ vim.keymap.set("n", "<s-q>", ":bp | bd # <CR>")
 vim.keymap.set("n", "<C-d>", "<C-d> | zz")
 vim.keymap.set("n", "<C-u>", "<C-u> | zz")
 
+-- cener page after paragraph up/down
+vim.keymap.set("n", "}", "}zz")
+vim.keymap.set("n", "{", "{zz")
+
 -- center page after search with n/N
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
