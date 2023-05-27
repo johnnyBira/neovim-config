@@ -86,7 +86,10 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 	pattern = { "*" },
 })
 
----kl
+-- disable word wrap
+vim.opt.wrap = false
+-- enable vertical scroll
+vim.opt.scrolloff = 8
 
 -- * Activate autoupdate on exit
 --  let g:tmux_navigator_save_on_switch = 1
