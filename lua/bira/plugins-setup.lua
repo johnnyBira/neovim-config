@@ -103,7 +103,7 @@ require("lazy").setup({
 			"nvim-tree/nvim-web-devicons", -- optional, for file icons
 		},
 		lazy = true,
-		cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeClose" },
+		cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeClose", "NvimTreeFindFileToggle " },
 	},
 
 	-- Copilot

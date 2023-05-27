@@ -87,6 +87,8 @@ local on_attach = function(bufnr)
 	vim.keymap.set("n", "q", api.tree.change_root_to_parent, opts("Up"))
 end
 
+vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle <cr>")
+
 require("nvim-tree").setup({
 	on_attach = on_attach,
 	view = {

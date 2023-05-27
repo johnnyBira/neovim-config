@@ -14,10 +14,6 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
--- nvim tree
-vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle <cr>")
-vim.keymap.set("n", "<leader>l", ":NvimTreeOpen <cr>")
-
 -- use jk to exit insert mode
 vim.keymap.set("i", "jk", "<ESC>")
 vim.g.copilot_assume_mapped = true
