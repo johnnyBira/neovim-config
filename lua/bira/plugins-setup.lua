@@ -74,25 +74,8 @@ require("lazy").setup({
 	"lukas-reineke/indent-blankline.nvim",
 	-- 'gc' to comment visual regions/lines
 	"numToStr/Comment.nvim",
-	-- Enable commentstring based on treesitter context
-	{
-		"JoosepAlviste/nvim-ts-context-commentstring",
-		lazy = true,
-		ft = {
-			"javascript",
-			"typescript",
-			"typescriptreact",
-			"javascriptreact",
-			"lua",
-			"python",
-			"html",
-			"css",
-			"scss",
-			"markdown",
-			"graphql",
-			"typescrip",
-		},
-	},
+	-- 'gcc' to comment out lines
+	"JoosepAlviste/nvim-ts-context-commentstring",
 	-- Detect tabstop and shiftwidth automatically
 	"tpope/vim-sleuth",
 	-- Surround text objects
