@@ -61,6 +61,9 @@ vim.keymap.set("n", "<C-u>", "<C-u> | zz")
 vim.keymap.set("n", "}", "}zz")
 vim.keymap.set("n", "{", "{zz")
 
+-- cener page after go to next/previous jump point
+vim.keymap.set("n", "<C-o>", "<C-o> | zz")
+vim.keymap.set("n", "<C-i>", "<C-i> | zz")
 -- center page after search with n/N
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
