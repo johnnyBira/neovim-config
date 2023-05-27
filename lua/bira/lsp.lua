@@ -27,6 +27,7 @@ local on_attach = function(_, bufnr)
 	-- next/previous diagnostic
 	nmap("C-n", vim.lsp.diagnostic.goto_next, "[D]iagnostic [N]ext")
 	nmap("C-p", vim.lsp.diagnostic.goto_prev, "[D]iagnostic [P]revious")
+	nmap("<leader>j", vim.diagnostic.open_float, "Open Diagnostic Float")
 
 	-- See `:help K` for why this keymap
 	nmap("<leader>k", vim.lsp.buf.hover, "Hover Documentation")

@@ -64,6 +64,7 @@ vim.keymap.set("n", "{", "{zz")
 -- cener page after go to next/previous jump point
 vim.keymap.set("n", "<C-o>", "<C-o> | zz")
 vim.keymap.set("n", "<C-i>", "<C-i> | zz")
+
 -- center page after search with n/N
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -113,7 +114,8 @@ vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("n", "<leader>o", ":silent !open <cWORD><CR>")
 
 -- open diagonistics in a floating window with leader + j
-vim.keymap.set("n", "<leader>j", ':lua vim.diagnostic.open_float(0, {scope="line"})<CR>')
+-- vim.keymap.set("n", "<leader>j", ':lua vim.diagnostic.open_float(0, {scope="line"})<CR>', { silent = true })
+-- vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
 
 -- keymap for opening lazygit
 vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>")
