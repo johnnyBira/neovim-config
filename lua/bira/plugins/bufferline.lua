@@ -9,5 +9,11 @@ bufferline.setup({
 				separator = true, -- use a "true" to enable the default, or set your own character
 			},
 		},
+		separator_style = "thin",
+		diagnostics = "nvim_lsp",
+		diagnostics_indicator = function(count, level)
+			local icon = level:match("require") and " " or ""
+			return icon .. count
+		end,
 	},
 })
