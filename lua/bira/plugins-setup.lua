@@ -34,7 +34,6 @@ require("lazy").setup({
 		"hrsh7th/nvim-cmp",
 		dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
 	},
-
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		build = function()
@@ -42,6 +41,7 @@ require("lazy").setup({
 		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
+			"JoosepAlviste/nvim-ts-context-commentstring",
 		},
 	},
 
