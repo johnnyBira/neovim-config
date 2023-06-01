@@ -57,10 +57,8 @@ local servers = {
 	pyright = {},
 	rust_analyzer = {},
 	tsserver = {},
-	markdownlint = {},
-	markdown = {},
 
-	sumneko_lua = {
+	lua_ls = {
 		Lua = {
 			workspace = { checkThirdParty = false },
 			telemetry = { enable = false },
