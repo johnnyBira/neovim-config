@@ -25,8 +25,8 @@ local on_attach = function(_, bufnr)
 	nmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
 	nmap("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
 	-- next/previous diagnostic
-	nmap("C-n", vim.lsp.diagnostic.goto_next, "[D]iagnostic [N]ext")
-	nmap("C-p", vim.lsp.diagnostic.goto_prev, "[D]iagnostic [P]revious")
+	nmap("C-n", vim.diagnostic.goto_next, "[D]iagnostic [N]ext")
+	nmap("C-p", vim.diagnostic.goto_prev, "[D]iagnostic [P]revious")
 	nmap("<leader>j", vim.diagnostic.open_float, "Open Diagnostic Float")
 
 	-- See `:help K` for why this keymap
@@ -95,6 +95,5 @@ mason_lspconfig.setup_handlers({
 
 -- Turn on lsp status information
 require("fidget").setup()
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
