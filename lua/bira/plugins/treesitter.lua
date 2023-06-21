@@ -9,7 +9,7 @@ end
 -- See `:help nvim-treesitter`
 treesitter.setup({
 	-- Add languages to be installed here that you want installed for treesitter
-	ensure_installed = { "c", "cpp", "go", "lua", "python", "rust", "typescript", "help", "vim", "graphql" },
+	ensure_installed = { "c", "cpp", "go", "lua", "python", "rust", "typescript", "help", "vim", "graphql", "markdown" },
 	context_commentstring = {
 		enable = true,
 	},
