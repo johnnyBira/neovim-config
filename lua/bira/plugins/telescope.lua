@@ -46,7 +46,12 @@ vim.keymap.set("n", "<leader>sc", function()
 	})
 end, { desc = "[S]earch [C]onfigs" })
 
-vim.keymap.set("n", "<leader>sf", require("telescope.builtin").find_files, { desc = "[S]earch [F]iles" })
+vim.keymap.set("n", "<leader>sf", function()
+	require("telescope.builtin").find_files({
+		prompt_title = "[S]earch [F]iles",
+		hidden = true,
+	})
+end, { desc = "[S]earch [F]iles" })
 vim.keymap.set("n", "<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
 vim.keymap.set("n", "<leader>sl", require("telescope.builtin").git_status, { desc = "[S]earch Git [L]og" })
 vim.keymap.set("n", "<leader>sl", require("telescope.builtin").git_branches, { desc = "[S]earch Git [B]ranches" })
