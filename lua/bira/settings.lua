@@ -1,3 +1,6 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- disable netrw at the very start of your init.lua (strongly advised)
 --
 vim.g.loaded_netrw = 1
@@ -36,7 +39,6 @@ vim.wo.signcolumn = "yes"
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd("colorscheme duskfox")
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noselect"

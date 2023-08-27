@@ -1,17 +1,22 @@
-local ok, lualine = pcall(require, "lualine")
-
-if not ok then
-  return
-end
-
--- Set lualine as statusline
--- See `:help lualine.txt`
-lualine.setup {
-  options = {
-    theme = 'duskfox',
-    component_separators = '|',
-    section_separators = '',
-    path = 1
-  },
+return {
+	"nvim-lualine/lualine.nvim",
+	config = function()
+		require("lualine").setup({
+			options = {
+				theme = "duskfox",
+				component_separators = "|",
+				section_separators = "",
+				path = 1,
+			},
+			sections = {
+				lualine_x = {
+					{
+						require("lazy.status").updates,
+						cond = require("lazy.status").has_updates,
+						color = { fg = "ff9e64" },
+					},
+				},
+			},
+		})
+	end,
 }
-

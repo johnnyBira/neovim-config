@@ -1,11 +1,16 @@
-require("bira.plugins.telescope")
-require("bira.plugins.lualine")
-require("bira.plugins.treesitter")
-require("bira.plugins.cmp")
-require("bira.plugins.nvimtree")
-require("bira.plugins.bufferline")
-require("bira.plugins.lazygit")
-require("bira.plugins.gitsigns")
-require("bira.plugins.null-ls")
-require("bira.plugins.indent-blankline")
-require("bira.plugins.surround")
+return {
+	-- 'gcc' to comment out lines
+	"JoosepAlviste/nvim-ts-context-commentstring",
+	-- Detect tabstop and shiftwidth automatically
+	"tpope/vim-sleuth",
+	-- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
+	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+	{
+		"rose-pine/neovim",
+		as = "rose-pine",
+		config = function()
+			require("rose-pine").setup()
+			-- vim.cmd('colorscheme rose-pine')
+		end,
+	},
+}

@@ -1,12 +1,21 @@
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
 	-- NOTE: Remember that lua is a real programming language, and as such it is possible
 	-- to define small helper and utility functions so you don't have to repeat yourself
 	-- many times.
 	--
 	-- In this case, we create a function that lets us more easily define mappings specific
 	-- for LSP related items. It sets the mode, buffer and description for us each time.
+
+	if client.name == "tsserver" then
+		print("Setting tsserver specific settings")
+		client.server_capabilities.documentFormattingProvider = false
+		client.resolved_capabilities.document_formatting = false -- resolved_capabilities is depricated
+		client.server_capabilities.document_formatting = false -- resolved_capabilities doesn't use document_formatting
+		client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
+	end
+
 	local nmap = function(keys, func, desc)
 		if desc then
 			desc = "LSP: " .. desc
@@ -46,7 +55,6 @@ local on_attach = function(_, bufnr)
 		vim.lsp.buf.format()
 	end, { desc = "Format current buffer with LSP" })
 end
-
 -- Enable the following language servers
 --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 --
@@ -72,7 +80,7 @@ require("neodev").setup()
 --
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+-- capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 -- Setup mason so it can manage external tooling
 require("mason").setup()
@@ -95,6 +103,6 @@ mason_lspconfig.setup_handlers({
 })
 
 -- Turn on lsp status information
-require("fidget").setup()
+-- require("fidget").setup()
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
