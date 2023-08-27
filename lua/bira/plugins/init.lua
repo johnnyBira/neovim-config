@@ -13,4 +13,5 @@ return {
 			-- vim.cmd('colorscheme rose-pine')
 		end,
 	},
+	{ "tpope/vim-rhubarb", lazy = true, cmd = { "Gbrowse", "Gpull", "Gpush" } },
 }
