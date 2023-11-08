@@ -117,7 +117,4 @@ vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>")
 -- wrap selected text with console.log()
 vim.keymap.set("v", "<leader>l", [[:s/^/console.log(/<CR>:s/$/);<CR>]])
 
-vim.keymap.set({ "n", "v" }, "<S-w>", "$", { desc = "Move to end of line" })
-vim.keymap.set({ "n", "v" }, "<S-b>", "0", { desc = "Move to start of line" })
-
 vim.keymap.set({ "n", "v" }, "<S-u>", "<C-r>", { desc = "Redo" })
