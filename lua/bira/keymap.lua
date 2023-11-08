@@ -51,10 +51,6 @@ vim.keymap.set("n", "<C-u>", "<C-u> | zz", { desc = "Center page after page up" 
 vim.keymap.set("n", "}", "}zz", { desc = "Center page after paragraph down" })
 vim.keymap.set("n", "{", "{zz", { desc = "Center page after paragraph up" })
 
--- cener page after go to next/previous jump point
-vim.keymap.set("n", "<C-o>", "<C-o> | zz", { desc = "Center page after go to next jump point" })
-vim.keymap.set("n", "<C-i>", "<C-i> | zz", { desc = "Center page after go to previous jump point" })
-
 -- center page after search with n/N
 vim.keymap.set("n", "n", "nzzzv", { desc = "Center page after search with n" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Center page after search with N" })
