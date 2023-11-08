@@ -1,5 +1,6 @@
 return {
 	"github/copilot.vim",
+	event = "BufRead",
 	-- config = function()
 	-- 	require("copilot").setup({
 	-- 		suggestion = { enabled = true },

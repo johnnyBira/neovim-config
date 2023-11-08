@@ -2,10 +2,12 @@ return {
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",
 	dependencies = { "nvim-lua/plenary.nvim" },
+	event = "VeryLazy",
 	config = function()
 		local telescope = require("telescope")
 
 		telescope.setup({
+			hidden = true,
 			defaults = {
 				mappings = {
 					i = {
