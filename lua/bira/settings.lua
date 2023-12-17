@@ -108,6 +108,10 @@ vim.opt.scrolloff = 8
 -- ii* Disable vim->tmux navigation when the Vim pane is zoomed in tmux
 vim.g.tmux_navigator_disable_when_zoomed = 1
 
+-- spell check
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
+
 -- tab spacing and indentation
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
