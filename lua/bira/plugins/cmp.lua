@@ -5,12 +5,14 @@ return {
 	config = function(arts)
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
+		---@diagnostic disable-next-line missing-fields
 		cmp.setup({
 			snippet = {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
 				end,
 			},
+			---@diagnostic disable-next-line missing-fields
 			completion = {
 				completeopt = "menu,menuone,noinsert",
 			},
