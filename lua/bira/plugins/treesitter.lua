@@ -18,7 +18,6 @@ return { -- Highlight, edit, and navigate code
 			ensure_installed = {
 				"c",
 				"cpp",
-				"go",
 				"lua",
 				"python",
 				"rust",
