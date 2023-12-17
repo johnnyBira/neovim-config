@@ -23,10 +23,9 @@ vim.keymap.set("v", "<S-k>", ":m '<-2<CR>gv=gv", { silent = true })
 vim.keymap.set("n", "<S-h>", ":bprevious<CR>", { desc = "Jump to previous buffer", silent = true })
 vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Jump to next buffer", silent = true })
 
--- navigate to right and left split using contorl-h/l
+-- navigate splits using control-h/j/k/l
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Navigate to left split", silent = true })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Navigate to right split", silent = true })
--- navigate to top and bottom split using contorl-h/l
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Navigate to top split", silent = true })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Navigate to bottom split", silent = true })
 
