@@ -5,11 +5,12 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { silent = true })
 
 vim.g.copilot_assume_mapped = true
 
--- scale splits using control-shift-hjkl
-vim.keymap.set("n", "<c-s-h>", ":vertical-resize -5 <cr>", { silent = true })
-vim.keymap.set("n", "<c-s-j>", ":horizontal-resize -5 <cr>", { silent = true })
-vim.keymap.set("n", "<C-S-k>", ":horizontal-resize +5 <cr>", { silent = true })
-vim.keymap.set("n", "<C-S-l>", ":vertical-resize +5 <cr>", { silent = true })
+-- scale splits using control-shift-h/j/k/l
+local incrementBy = 10
+vim.keymap.set("n", "<c-s-h>", ":vertical resize -" .. incrementBy .. " <cr>", { silent = true })
+vim.keymap.set("n", "<c-s-j>", ":horizonta resize -" .. incrementBy .. "<cr>", { silent = true })
+vim.keymap.set("n", "<C-S-k>", ":horizontal resize +" .. incrementBy .. "<cr>", { silent = true })
+vim.keymap.set("n", "<C-S-l>", ":vertical resize +" .. incrementBy .. "<cr>", { silent = true })
 
 -- redo using control-shift-u
 vim.keymap.set("n", "U", "<C-r>", { silent = true })
