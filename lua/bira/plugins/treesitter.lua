@@ -26,6 +26,8 @@ return { -- Highlight, edit, and navigate code
 				"vim",
 				"graphql",
 				"markdown",
+				"astro",
+				"css",
 			},
 			context_commentstring = {
 				enable = true,
