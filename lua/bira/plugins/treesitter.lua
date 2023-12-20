@@ -13,6 +13,7 @@ return { -- Highlight, edit, and navigate code
 
 		-- [[ Configure Treesitter ]]
 		-- See `:help nvim-treesitter`
+		---@diagnostic disable-next-line missing-fields
 		treesitter.setup({
 			-- Add languages to be installed here that you want installed for treesitter
 			ensure_installed = {
@@ -24,13 +25,15 @@ return { -- Highlight, edit, and navigate code
 				"typescript",
 				"help",
 				"vim",
-				"graphql",
 				"markdown",
 				"astro",
 				"css",
+				"tsx",
+				"bash",
 			},
-			context_commentstring = {
-				enable = true,
+			enable_autocmd = false,
+			languages = {
+				typescript = "// %s",
 			},
 			highlight = { enable = true },
 			indent = { enable = true, disable = { "python" } },
