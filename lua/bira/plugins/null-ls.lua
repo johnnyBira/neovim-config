@@ -26,6 +26,7 @@ return {
 				null_ls.builtins.formatting.eslint_d,
 				null_ls.builtins.code_actions.eslint_d,
 				null_ls.builtins.completion.spell,
+				null_ls.builtins.formatting.astro,
 				-- null_ls.builtins.code_actions.xo,
 				-- null_ls.builtins.diagnostics.xo.with({
 				-- 	-- milliseconds
