@@ -58,9 +58,9 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Center page after search with N", si
 -- center page after jumping to button of file with G
 vim.keymap.set("n", "G", "Gzzzv", { desc = "Center page after jumping to button of file with G", silent = true })
 
--- indent using using < and r on selected lines in visual mode
-vim.keymap.set("v", "<", "<gv", { desc = "Unindent selected lines in visual mode", silent = true })
-vim.keymap.set("v", ">", ">gv", { desc = "Indent selected lines in visual mode", silent = true })
+-- indent using using shift and r on selected lines in visual mode
+vim.keymap.set("v", "<s-Tab>", "<gv", { desc = "Unindent selected lines in visual mode", silent = true })
+vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent selected lines in visual mode", silent = true })
 
 -- save using control + s
 vim.keymap.set("n", "<C-s>", ":w<CR>", { desc = "Save file", silent = true })
