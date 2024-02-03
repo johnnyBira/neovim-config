@@ -44,8 +44,8 @@ vim.keymap.set("n", "<leader>Q", ":q! <CR>", { desc = "Force close current split
 vim.keymap.set("n", "<s-q>", ":bp | bd # <CR>", { desc = "Close current buffer", silent = true })
 
 -- center page after page up/down
-vim.keymap.set("n", "<C-d>", "<C-d> | zz", { desc = "Center page after page down", silent = true })
-vim.keymap.set("n", "<C-u>", "<C-u> | zz", { desc = "Center page after page up", silent = true })
+-- vim.keymap.set("n", "<C-d>", "<C-d> | zz", { desc = "Center page after page down", silent = true })
+-- vim.keymap.set("n", "<C-u>", "<C-u> | zz", { desc = "Center page after page up", silent = true })
 
 -- cener page after paragraph up/down
 vim.keymap.set("n", "}", "}zz", { desc = "Center page after paragraph down", silent = true })
