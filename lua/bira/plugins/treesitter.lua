@@ -34,6 +34,7 @@ return { -- Highlight, edit, and navigate code
 				"tsx",
 				"bash",
 			},
+			auto_install = true,
 			enable_autocmd = false,
 			languages = {
 				typescript = "// %s",
