@@ -19,6 +19,7 @@ return {
 		end
 
 		null_ls.setup({
+			timeout_ms = 5000,
 			sources = {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettierd,
