@@ -33,7 +33,7 @@ return {
 						prompt_position = "top",
 					},
 				},
-				file_ignore_patterns = { "node_modules", "target", "dist", "build" },
+				file_ignore_patterns = { "^.git/" },
 			},
 		})
 
