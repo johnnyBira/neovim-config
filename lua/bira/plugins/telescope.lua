@@ -19,8 +19,8 @@ return {
 						["<C-j>"] = actions.move_selection_next,
 						["<C-k>"] = actions.move_selection_previous,
 						-- scroll
-						["<C-f>"] = actions.cycle_history_next,
-						["<C-b>"] = actions.cycle_history_prev,
+						["<down>"] = actions.cycle_history_next,
+						["<up>"] = actions.cycle_history_prev,
 						-- quit
 						["<Esc>"] = actions.close,
 					},
