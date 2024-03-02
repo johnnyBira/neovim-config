@@ -41,7 +41,7 @@ vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "Open vertical split",
 vim.keymap.set("n", "<leader>q", ":q <CR>", { desc = "Close current split window", silent = true })
 -- force close current split window with leader + u
 vim.keymap.set("n", "<leader>Q", ":q! <CR>", { desc = "Force close current split window", silent = true })
-vim.keymap.set("n", "<s-q>", ":bp | bd # <CR>", { desc = "Close current buffer", silent = true })
+vim.keymap.set("n", "<S-w>", ":bp | bd # <CR>", { desc = "Close current buffer", silent = true })
 
 -- center page after page up/down
 -- vim.keymap.set("n", "<C-d>", "<C-d> | zz", { desc = "Center page after page down", silent = true })
