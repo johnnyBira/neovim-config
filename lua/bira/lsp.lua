@@ -66,8 +66,6 @@ local servers = {
 	rust_analyzer = {},
 	tsserver = {},
 	marksman = {},
-	graohql = {},
-	astro = {},
 	mdx_analyzer = {},
 
 	lua_ls = {
