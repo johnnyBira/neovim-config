@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	dependencies = { "nvim-lua/plenary.nvim", "kkharji/sqlite.lua", "nvim-telescope/telescope-smart-history.nvim" },
 	event = "VeryLazy",
 	config = function()
 		local telescope = require("telescope")
@@ -34,6 +34,10 @@ return {
 					},
 				},
 				file_ignore_patterns = { "^.git/" },
+				history = {
+					path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
+					limit = 100,
+				},
 			},
 		})
 
