@@ -95,6 +95,9 @@ return {
 				ignore = false,
 			},
 			describe,
+			update_focused_file = {
+				enable = true,
+			},
 		})
 	end,
 }
