@@ -1,6 +1,9 @@
 return {
 	"nvimtools/none-ls.nvim",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	dependencies = {
+		"nvimtools/none-ls-extras.nvim",
+		"gbprod/none-ls-shellcheck.nvim",
+	},
 	event = "BufReadPre",
 	config = function()
 		local null_ls = require("null-ls")
@@ -23,13 +26,13 @@ return {
 			sources = {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettierd,
-				null_ls.builtins.diagnostics.eslint_d,
-				null_ls.builtins.formatting.eslint_d,
-				null_ls.builtins.code_actions.eslint_d,
 				null_ls.builtins.completion.spell,
 				null_ls.builtins.formatting.shfmt,
-				null_ls.builtins.code_actions.shellcheck,
-				null_ls.builtins.diagnostics.shellcheck,
+				require("none-ls.diagnostics.eslint_d"),
+				require("none-ls.formatting.eslint_d"),
+				require("none-ls.code_actions.eslint_d"),
+				require("none-ls-shellcheck.diagnostics"),
+				require("none-ls-shellcheck.code_actions"),
 			},
 			on_attach = function(client, bufnr)
 				if client.supports_method("textDocument/formatting") then
