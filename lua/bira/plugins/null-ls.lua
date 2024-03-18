@@ -1,7 +1,12 @@
 return {
 	"nvimtools/none-ls.nvim",
 	dependencies = {
+		-- Al lot of builtins were removed from null-ls as part of this PR:
+		-- https://github.com/nvimtools/none-ls.nvim/discussions/81
+		-- Some of them were moved to none-ls-extras.nvim
+		-- https://github.com/nvimtools/none-ls-extras.nvim/tree/main?tab=readme-ov-file
 		"nvimtools/none-ls-extras.nvim",
+		-- this adds back the builltin shellcheck that was removed from null-ls
 		"gbprod/none-ls-shellcheck.nvim",
 	},
 	event = "BufReadPre",
