@@ -1,6 +1,6 @@
 return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
-	event = "BufReadPre",
+	event = { "BufReadPre", "BufNewFile" },
 	build = function()
 		pcall(require("nvim-treesitter.install").update({ with_sync = true }))
 	end,
@@ -40,16 +40,16 @@ return { -- Highlight, edit, and navigate code
 				typescript = "// %s",
 			},
 			highlight = { enable = true },
-			indent = { enable = true, disable = { "python" } },
-			-- incremental_selection = {
-			--   enable = true,
-			--   keymaps = {
-			--     init_selection = '<c-space>',
-			--     node_incremental = '<c-space>',
-			--     scope_incremental = '<c-s>',
-			--     node_decremental = '<c-backspace>',
-			--   },
-			-- },
+			indent = { enable = true },
+			incremental_selection = {
+				enable = true,
+				keymaps = {
+					init_selection = "<c-space>",
+					node_incremental = "<c-space>",
+					scope_incremental = false,
+					node_decremental = "<c-backspace>",
+				},
+			},
 			textobjects = {
 				select = {
 					enable = true,
