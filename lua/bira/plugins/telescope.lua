@@ -34,6 +34,7 @@ return {
 					},
 				},
 				file_ignore_patterns = { "^.git/" },
+				file_ignore_patterns = { "^.git/", ".obsidian" },
 				history = {
 					path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
 					limit = 100,
