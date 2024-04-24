@@ -112,3 +112,6 @@ vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { silent = true })
 vim.keymap.set("v", "<leader>l", [[:s/^/console.log(/<CR>:s/$/, { silent = true });<CR>]])
 
 vim.keymap.set({ "n", "v" }, "<S-u>", "<C-r>", { desc = "Redo", silent = true })
+
+-- go to URL under cursor
+vim.keymap.set("n", "gx", ":!open <cWORD><cr>", { silent = true })
