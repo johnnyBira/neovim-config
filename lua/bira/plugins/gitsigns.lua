@@ -24,5 +24,7 @@ return {
 		vim.keymap.set("n", "]g", ":Gitsigns next_hunk<CR>", { silent = true })
 		vim.keymap.set("n", "[g", ":Gitsigns prev_hunk<CR>", { silent = true })
 		vim.keymap.set("n", "<leader>gv", ":Gitsigns select_hunk<CR>", { silent = true })
+		vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { silent = true })
+		vim.keymap.set("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", { silent = true })
 	end,
 }
