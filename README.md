@@ -2,36 +2,25 @@
 
 Config for the [Neovim text editor][https://neovim.io/].
 
-## Plugins
+Features:
 
-- telescope
-- lualine
-- treesitter
-- cmp
-- nvimtree
-- bufferline
-- lazygit
-- gitsigns
-  require "bira.plugins.null-ls"
-  require "bira.plugins.gitgutter"
-  require "bira.plugins.mini"
-  require "bira.plugins.indent-blankline"
-  require "bira.plugins.surround"
-  s- require "bira.plugins.mini-starter"
+- LSP
+- Treesitter
+- Telescope
+- Gitsigns
+- Lazygit
+- Lualine
+- Nvim-tree
+- Nvim-compe
+- Nvim-treesitter
+- Noice
+- vim surround
+- null ls ()
 
-* [] Plugin managment using Lazy
-* [] Copilot
+Todo:
+
+- [ ] DAP for TypeScript
+- [ ] Chat GPT
+- [ ] Add Obsidian related plugins
 
 ---
-
-| hello     | there                    |
-| --------- | ------------------------ |
-| somehtibg | jfsjdf hsjdkfhdsjfhdseee |
-
-## LSPs
-
-- TypeScript
-- GraohQL
-  [test](/test.md#third-test)
-  [[hello-worldk]]
-  (Test)[./test.md]J
