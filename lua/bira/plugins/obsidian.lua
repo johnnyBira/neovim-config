@@ -3,7 +3,14 @@ local vault_dir = "/Documents/Obsidian Vault"
 return {
 	"epwalsh/obsidian.nvim",
 	version = "*", -- recommended, use latest release instead of latest commit
-	lazy = true,
+	-- lazy = true,
+	keys = {
+		"<leader>ot",
+		"<leader>oo",
+		"<leader>fo",
+		"<leader>od",
+		"<leader>oy",
+	},
 	event = {
 		"BufReadPre " .. vim.fn.expand("~") .. vault_dir .. "/**.md",
 		"BufNewFile " .. vim.fn.expand("~") .. vault_dir .. "/**.md",
@@ -36,7 +43,7 @@ return {
 				vim.fn.jobstart({ "open", url })
 			end,
 		})
-		vim.keymap.set("n", "<leader>ot", ":ObsidianToday<CR>", { desc = "Create/Open todays note", silent = true })
+		vim.keymap.set("n", "<leader>ot", ":ObsidianTomorrow<CR>", { desc = "Create/Open todays note", silent = true })
 		vim.keymap.set("n", "<leader>oo", ":ObsidianOpen<CR>", { desc = "Oopen current note", silent = true })
 		vim.keymap.set("n", "<leader>fo", ":ObsidianSearch<CR>", { desc = "Open current note", silent = true })
 		vim.keymap.set("n", "<leader>od", ":ObsidianToday<CR>", { desc = "Open todays note", silent = true })

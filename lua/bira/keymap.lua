@@ -98,13 +98,6 @@ vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
 -- replace all occurences of word under cursor with new word
 vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { silent = true })
 
--- open link under cursor in browser
-vim.keymap.set("n", "<leader>o", ":silent !open <cWORD><CR>", { silent = true })
-
--- open diagonistics in a floating window with leader + j
--- vim.keymap.set("n", "<leader>j", ':lua vim.diagnostic.open_float(0, {scope="line"}, { silent = true })<CR>', { silent = true })
--- vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, { silent = true })
-
 -- keymap for opening lazygit
 vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { silent = true })
 
@@ -112,6 +105,3 @@ vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { silent = true })
 vim.keymap.set("v", "<leader>l", [[:s/^/console.log(/<CR>:s/$/, { silent = true });<CR>]])
 
 vim.keymap.set({ "n", "v" }, "<S-u>", "<C-r>", { desc = "Redo", silent = true })
-
--- go to URL under cursor
-vim.keymap.set("n", "gx", ":!open <cWORD><cr>", { silent = true })
