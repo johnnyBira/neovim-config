@@ -1,15 +1,21 @@
 local vault_dir = "/Documents/Obsidian Vault"
 
+local open_yesterday_keymap = "<leader>oy"
+local open_today_keymap = "<leader>od"
+local open_tomorrow_keymap = "<leader>ot"
+local open_obsidian_keymap = "<leader>oo"
+local search_note_keymap = "<leader>fo"
+
 return {
 	"epwalsh/obsidian.nvim",
 	version = "*", -- recommended, use latest release instead of latest commit
 	-- lazy = true,
 	keys = {
-		"<leader>ot",
-		"<leader>oo",
-		"<leader>fo",
-		"<leader>od",
-		"<leader>oy",
+		open_yesterday_keymap,
+		open_today_keymap,
+		open_tomorrow_keymap,
+		open_obsidian_keymap,
+		search_note_keymap,
 	},
 	event = {
 		"BufReadPre " .. vim.fn.expand("~") .. vault_dir .. "/**.md",
@@ -43,10 +49,20 @@ return {
 				vim.fn.jobstart({ "open", url })
 			end,
 		})
-		vim.keymap.set("n", "<leader>ot", ":ObsidianTomorrow<CR>", { desc = "Create/Open todays note", silent = true })
-		vim.keymap.set("n", "<leader>oo", ":ObsidianOpen<CR>", { desc = "Oopen current note", silent = true })
-		vim.keymap.set("n", "<leader>fo", ":ObsidianSearch<CR>", { desc = "Open current note", silent = true })
-		vim.keymap.set("n", "<leader>od", ":ObsidianToday<CR>", { desc = "Open todays note", silent = true })
-		vim.keymap.set("n", "<leader>oy", ":ObsidianYesterday<CR>", { desc = "Open yesterdays note", silent = true })
+		vim.keymap.set(
+			"n",
+			open_yesterday_keymap,
+			":ObsidianYesterday<CR>",
+			{ desc = "Open yesterdays note", silent = true }
+		)
+		vim.keymap.set("n", open_today_keymap, ":ObsidianToday<CR>", { desc = "Open todays note", silent = true })
+		vim.keymap.set(
+			"n",
+			open_tomorrow_keymap,
+			":ObsidianTomorrow<CR>",
+			{ desc = "Create/Open todays note", silent = true }
+		)
+		vim.keymap.set("n", open_obsidian_keymap, ":ObsidianOpen<CR>", { desc = "Oopen current note", silent = true })
+		vim.keymap.set("n", search_note_keymap, ":ObsidianSearch<CR>", { desc = "Search notes", silent = true })
 	end,
 }
