@@ -36,11 +36,27 @@ local on_attach = function(client, bufnr)
 	-- next/previous diagnostic
 	nmap("]e", vim.diagnostic.goto_next, "[D]iagnostic [N]ext")
 	nmap("[e", vim.diagnostic.goto_prev, "[D]iagnostic [P]revious")
-	nmap("<leader>j", vim.diagnostic.open_float, "Open Diagnostic Float")
 
-	-- See `:help K` for why this keymap
+	-- setup diagnostic float
+	nmap("<leader>j", vim.diagnostic.open_float, "Open Diagnostic Float")
+	vim.diagnostic.config({
+		float = { border = "rounded", title = "Diagnostics" },
+	})
+
+	-- setup hover float
 	nmap("<leader>k", vim.lsp.buf.hover, "Hover Documentation")
+	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+		border = "rounded",
+		title = "Hover",
+	})
+
+	-- setup signature help
 	nmap("K", vim.lsp.buf.signature_help, "Signature Documentation")
+	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.wi
+	th(vim.lsp.handlers.signature_help, {
+		border = "rounded",
+		title = "Signature Help",
+	})
 
 	-- Lesser used LSP functionality
 	nmap("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
