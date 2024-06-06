@@ -52,8 +52,7 @@ local on_attach = function(client, bufnr)
 
 	-- setup signature help
 	nmap("K", vim.lsp.buf.signature_help, "Signature Documentation")
-	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.wi
-	th(vim.lsp.handlers.signature_help, {
+	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
 		border = "rounded",
 		title = "Signature Help",
 	})
