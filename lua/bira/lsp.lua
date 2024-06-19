@@ -118,6 +118,12 @@ mason_lspconfig.setup_handlers({
 	end,
 })
 
+require("lspconfig").gdscript.setup({
+	name = "godot",
+	cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
 -- Turn on lsp status information
 -- require("fidget").setup()
 -- The line beneath this is called `modeline`. See `:help modeline`
