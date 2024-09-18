@@ -44,10 +44,10 @@ return { -- Highlight, edit, and navigate code
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = "<c-space>",
-					node_incremental = "<c-space>",
+					init_selection = "<C-SPACE>",
+					node_incremental = "<SPACE>",
 					scope_incremental = false,
-					node_decremental = "<c-backspace>",
+					node_decremental = "<BACKSPACE>",
 				},
 			},
 			textobjects = {
