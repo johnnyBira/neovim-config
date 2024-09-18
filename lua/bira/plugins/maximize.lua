@@ -4,6 +4,9 @@ return {
 		"<leader>z",
 	},
 	config = function()
-		require("maximize").setup()
+		local maximize = require("maximize")
+		maximize.setup()
+
+		vim.keymap.set("n", "<leader>z", ":Maximize<CR>", { silent = true })
 	end,
 }
