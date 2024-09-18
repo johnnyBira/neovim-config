@@ -1,5 +1,6 @@
 return {
 	"sontungexpt/url-open",
+	cond = false,
 	keys = { "<CR>" },
 	config = function()
 		local status_ok, url_open = pcall(require, "url-open")
