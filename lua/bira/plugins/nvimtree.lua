@@ -78,7 +78,8 @@ return {
 			vim.keymap.set("n", "q", api.tree.change_root_to_parent, opts("Up"))
 		end
 
-		vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle <CR>", { silent = true })
+		vim.keymap.set("n", "<leader>ee", ":NvimTreeFindFileToggle <CR>", { silent = true })
+		vim.keymap.set("n", "<leader>ef", "::NvimTreeFocus <CR>", { silent = true })
 
 		require("nvim-tree").setup({
 			on_attach = on_attach,
