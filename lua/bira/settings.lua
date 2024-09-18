@@ -118,3 +118,8 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.conceallevel = 1
+
+local pipepath = vim.fn.stdpath("cache") .. "/godot.pipe"
+if not vim.loop.fs_stat(pipepath) then
+	vim.fn.serverstart(pipepath)
+end
