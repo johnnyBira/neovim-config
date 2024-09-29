@@ -43,18 +43,6 @@ vim.keymap.set("n", "<leader>w", ":q <CR>", { desc = "Close current split window
 vim.keymap.set("n", "<leader>Q", ":q! <CR>", { desc = "Force close current split window", silent = true })
 vim.keymap.set("n", "<C-w>", ":bp | bd # <CR>", { desc = "Close current buffer", silent = true })
 
--- center page after page up/down
--- vim.keymap.set("n", "<C-d>", "<C-d> | zz", { desc = "Center page after page down", silent = true })
--- vim.keymap.set("n", "<C-u>", "<C-u> | zz", { desc = "Center page after page up", silent = true })
-
--- cener page after paragraph up/down
-vim.keymap.set("n", "}", "}zz", { desc = "Center page after paragraph down", silent = true })
-vim.keymap.set("n", "{", "{zz", { desc = "Center page after paragraph up", silent = true })
-
--- center page after search with n/N
-vim.keymap.set("n", "n", "nzzzv", { desc = "Center page after search with n", silent = true })
-vim.keymap.set("n", "N", "Nzzzv", { desc = "Center page after search with N", silent = true })
-
 -- center page after jumping to button of file with G
 vim.keymap.set("n", "G", "Gzzzv", { desc = "Center page after jumping to button of file with G", silent = true })
 
