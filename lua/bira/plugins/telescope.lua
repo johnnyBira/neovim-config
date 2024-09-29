@@ -27,7 +27,7 @@ return {
 				},
 				-- omit git ignore files from search
 				-- file_ignore_patterns = { ".git", "node_modules", "target", "dist", "build" },
-				layout_strategy = "vertical",
+				layout_strategy = "horizontal",
 				layout_config = {
 					vertical = {
 						prompt_position = "top",
