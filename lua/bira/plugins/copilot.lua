@@ -3,7 +3,7 @@ return {
 	event = "BufRead",
 	config = function()
 		-- I had some problems with tmux not sending the correct keycodes for Ctrl+Enter
-		-- so I had to change the keybinding to use the Enter key instead
+		-- tmux is setup to send "‰" when I press Ctrl+Enter
 		vim.keymap.set("i", "‰", 'copilot#Accept("\\<CR>")', {
 			expr = true,
 			replace_keycodes = false,
